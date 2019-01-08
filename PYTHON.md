@@ -24,12 +24,12 @@ alias pep8="pep8 --ignore=E302,E111"
 File Structure
 =================
 
-Below is an example file structure, please stack the import requests as seen below:
+Below is an example file structure, please stack the import requests as seen below. Please try to follow the standard pep8 structure of importing in the following order: standard libraries, pip libraries and then local imports (in that order)
+
 
 ```python
-import requests
 import os
-mport requests
+import requests
 from common.something import something
 
 
