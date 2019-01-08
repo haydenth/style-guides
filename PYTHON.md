@@ -1,6 +1,12 @@
 Python Styleguide Requirements
 ================
 
+The goal of a styleguide/lint guide for code is to create code that is:
+
+* Compact - Code libraries should be compact, logic should be bundled together and not spread out over many lines. 
+* Easy to Read - Code should be easy to read and clearly documented when necessary.
+* Not Burdensome to Write
+
 In general, we follow the standard python `pep8` style requirements but with a few notable differences:
 
 * ignore E111 (indentation is not a multiple of four) - we use **2 space indentation**
@@ -119,8 +125,26 @@ for i in range(0, 10):
 Can easily be stated in a single line as:
 
 ```python
-output_list = [i ** 2 for i in range(0, 10)
+output_list = [i ** 2 for i in range(0, 10)]
 ```
 
 If you're not familiar with list comprhensions please [read the python documentation](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python). Using list comprhensions properly makes the code dramatically more readable and maintainable.
 
+Sensible Comments
+===================
+Leave comments when necessary to explain some relevant thing but it's not necessary to leave comments if the function is clear in its purpose. Never leave frivolous comments describing what is obvious. Below is an example of a good comment:
+
+```python
+def do_something_complicated():
+  ''' this function is tricky - it can sometimes return
+  different results depending on the time of day. this is 
+  from a specific client request that data from 12-1 be multipled
+  by fourteen'''
+  ...
+```
+
+And a BAD comment below:
+```python
+def do_something():
+  ''' loop over the list and power 2 '''
+  return [i ** 2 for i in range(0, 10)]
