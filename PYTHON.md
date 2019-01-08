@@ -54,7 +54,7 @@ class ClassName:
     return i ** 2
 ```
 
-Please note PRIVATELY scoped attributes/methods differently from PUBLICLY scoped attributes and methods by starting the variable definition with an `_`. For instance:
+Please name PRIVATELY scoped attributes/methods differently from PUBLICLY scoped attributes and methods by starting the variable definition with an `_`. For instance:
 
 ```
 import requests
@@ -74,3 +74,22 @@ class ClassName:
     return i ** 3
 
 ```
+
+Use List Comphrensions
+=================
+Whenever possible use list comphrenesions in lieu of a for loop. For instance the below function to compute squared values:
+
+```
+output_list = []
+for i in range(0, 10):
+  output_list.append(i ** 2)
+
+```
+
+Can easily be stated in a single line as:
+
+```
+output_list = [i ** 2 for i in range(0, 10)
+```
+
+If you're not familiar with list comprhensions please [read the python documentation](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python)
