@@ -5,7 +5,7 @@ In general, we follow the standard python `pep8` style requirements but with a f
 
 * ignore E111 (indentation is not a multiple of four) - we use **2 space indentation**
 * ignore E302 (expected 2 blank lines, found 0/1) - we use **1 line break between function defs**
-* strictly enforce E501 (line too long (82 > 79 characters)) - strongly enforce 80 char max
+* strictly enforce E501 (line too long (82 > 79 characters)) - **strongly enforce 80 char max**
 * NO spaces in import statement block
 * **NO TABS EVER**
 
@@ -36,6 +36,23 @@ def this_is_a_function(parameter_name):
   some_function(parameter1, parameter2)
   for i in list:
     do_something_else()
+```
+
+Function Calls with Lots of Parameters
+=====================
+Sometimes when invoking a function with a lot of parameters, you need to go on a second or third line. When doing this, please indent two spaces on the line below. Example:
+
+```
+do_something(parameter1, parameter2, parameter3,
+  parameter4, parameter5, parameter6,
+  parameter7)
+```
+
+**DO NOT** do the old python style function invocation style
+```red
+do_something(parameter1,
+ 						 parameter2,
+             parameter3)
 ```
 
 Class Definition
