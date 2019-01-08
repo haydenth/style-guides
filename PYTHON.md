@@ -4,12 +4,16 @@ Python Styleguide Requirements
 In general, we follow the standard python `pep8` style requirements but with a few notable differences:
 
 * ignore E111 (indentation is not a multiple of four) - we use **2 space indentation**
-* ignore E302 (expected 2 blank lines, found 0) - we use **1 line break between function defs**
+* ignore E302 (expected 2 blank lines, found 0/1) - we use **1 line break between function defs**
 * strictly enforce E501 (line too long (82 > 79 characters)) - strongly enforce 80 char max
 * NO spaces in import statement block
 * **NO TABS EVER**
 
-Pull requests that do not meet this linting/style guide **will be rejected**
+Pull requests that do not meet this linting/style guide **will be rejected**. Below is the alias I add to my `.bashrc` (or `.bash_profile` on mac) that overrides the `pep8` command
+
+```
+alias pep8="pep8 --ignore=E302 --ignore=E111"
+```
 
 File Structure
 =================
