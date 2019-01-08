@@ -30,7 +30,7 @@ do_something()
 
 Function Definition
 ==================
-```
+```python
 def this_is_a_function(parameter_name):
   ''' please document the function here '''
   some_function(parameter1, parameter2)
@@ -42,16 +42,16 @@ Function Calls with Lots of Parameters
 =====================
 Sometimes when invoking a function with a lot of parameters, you need to go on a second or third line. When doing this, please indent two spaces on the line below. Example:
 
-```
+```python
 do_something(parameter1, parameter2, parameter3,
   parameter4, parameter5, parameter6,
   parameter7)
 ```
 
 **DO NOT** do the old python style function invocation style
-```red
+```python
 do_something(parameter1,
- 						 parameter2,
+             parameter2,
              parameter3)
 ```
 
@@ -59,7 +59,7 @@ Class Definition
 ===============
 Please note - class names should be in **CAMEL CASE** while all variables and methods should be in non-camel case underscore-based naming.
 
-```
+```python
 import requests
 import os
 
@@ -76,7 +76,7 @@ class ClassName:
 
 Please name PRIVATELY scoped attributes/methods differently from PUBLICLY scoped attributes and methods by starting the variable definition with an `_`. For instance:
 
-```
+```python
 import requests
 import os
 
@@ -109,7 +109,7 @@ Use List Comphrensions
 =================
 Whenever possible use list comphrenesions in lieu of a for loop. For instance the below function to compute squared values:
 
-```
+```python
 output_list = []
 for i in range(0, 10):
   output_list.append(i ** 2)
@@ -118,7 +118,7 @@ for i in range(0, 10):
 
 Can easily be stated in a single line as:
 
-```
+```python
 output_list = [i ** 2 for i in range(0, 10)
 ```
 
