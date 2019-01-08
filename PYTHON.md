@@ -143,7 +143,7 @@ def do_something_complicated():
   ...
 ```
 
-And a BAD comment below:
+And a BAD comment below. Don't write this comment, it's obvious and takes up a useless line of code.
 ```python
 def do_something():
   ''' loop over the list and power 2 '''
