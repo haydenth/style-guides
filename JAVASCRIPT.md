@@ -24,8 +24,8 @@ Arrays
 ===================
 Use literals for defining arrays:
 
-```
-const items = [];
+```js
+const items = []
 ```
 
 
@@ -36,6 +36,15 @@ Properly scoping variables is important. Please stick to using `let` and `const`
 * The let statement, which is like the var statement except that it respects block scope. You may use let or var but not both.
 * The const statement is like the let statement except that it disallows the use of assignment on the variable, although if the value of the variable is mutable, it can still be mutated. const is preferred to let.
 
+
+```js
+// yes
+const x = 'a'
+let y = 'b'
+
+// no
+var z = 'c'
+```
 
 Promises
 =====================
