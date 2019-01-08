@@ -101,7 +101,7 @@ render() {
 }
 ```
 
-This is clearly more of an art than a science and requires some practice. However, you should seek to break down components into the smallest re-usable components possible.
+This is clearly more of an art than a science and requires some practice. However, you should seek to break down components into the smallest re-usable components possible but also don't make 8000 one-off componenents.
 
 
 Lining Up Enclosures
@@ -112,13 +112,13 @@ Enclosures should be lined up so the closing bracket is clearly aligned with the
 ```js
 // bad
 return (<div>
- <span>
+ <span><span/>
  </div>)
 
 // good
 return (
   <div>
-    <span/> 
+    <span><span/> 
   </div>
 )
 ```
