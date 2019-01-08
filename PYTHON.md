@@ -12,7 +12,7 @@ In general, we follow the standard python `pep8` style requirements but with a f
 Pull requests that do not meet this linting/style guide **will be rejected**. Below is the alias I add to my `.bashrc` (or `.bash_profile` on mac) that overrides the `pep8` command
 
 ```
-alias pep8="pep8 --ignore=E302 --ignore=E111"
+alias pep8="pep8 --ignore=E302,E111"
 ```
 
 File Structure
