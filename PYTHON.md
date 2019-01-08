@@ -3,10 +3,11 @@ Python Styleguide Requirements
 
 In general, we follow the standard python `pep8` style requirements but with a few notable differences:
 
-** ignore E111 (indentation is not a multiple of four) - we use **2 space indentation**
-** ignore E302 (expected 2 blank lines, found 0) - we use **1 line break between function defs**
-** strictly enforce E501 (line too long (82 > 79 characters)) - strongly enforce 80 char max
-** NO spaces in import statement block
+* ignore E111 (indentation is not a multiple of four) - we use **2 space indentation**
+* ignore E302 (expected 2 blank lines, found 0) - we use **1 line break between function defs**
+* strictly enforce E501 (line too long (82 > 79 characters)) - strongly enforce 80 char max
+* NO spaces in import statement block
+* **NO TABS EVER**
 
 Pull requests that do not meet this linting/style guide **will be rejected**
 
@@ -64,12 +65,12 @@ class ClassName:
   def __init__(self):
     ''' this is the constructor '''
     self._some_private_value = '1234'
-		self.some_public_value = 'asdf'
+    self.some_public_value = 'asdf'
 
   def do_something_publicly(self, i):
     return i ** 2
 
-	def _do_something_privately(self, i):
-		return i ** 3
+  def _do_something_privately(self, i):
+    return i ** 3
 
 ```
