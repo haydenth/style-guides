@@ -27,9 +27,11 @@ File Structure
 Below is an example file structure, please stack the import requests as seen below:
 
 ```python
-from common.something import something
 import requests
 import os
+mport requests
+from common.something import something
+
 
 do_something()
 ```
