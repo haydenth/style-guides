@@ -32,7 +32,6 @@ import os
 import requests
 from common.something import something
 
-
 do_something()
 ```
 
