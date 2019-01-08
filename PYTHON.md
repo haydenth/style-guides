@@ -26,7 +26,6 @@ import requests
 import os
 
 do_something()
-
 ```
 
 Function Definition
