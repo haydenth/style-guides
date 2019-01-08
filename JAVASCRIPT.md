@@ -99,6 +99,6 @@ render() {
     <div><AddressBlock line1={this.props.address1} line2={this.props.address2} /></div>
   </div>)
 }
-
-
 ```
+
+This is clearly more of an art than a science and requires some practice. However, you should seek to break down components into the smallest re-usable components possible.
