@@ -98,6 +98,7 @@ fetch('http://checkip.dyndns.org/')
 
 React Components
 ===================
+
 There are websites with [https://css-tricks.com/react-code-style-guide](Some Good React Style Suggestions). We recommend these.
 
 For the love of god, please break down your React Components into smaller reusable components. Something is wrong if your react component is basically a bunch of HTML - think thru each individual component and try to break it into as small of piece as possible. For example:
