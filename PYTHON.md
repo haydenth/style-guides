@@ -3,12 +3,12 @@ Python Styleguide Requirements
 
 In general, we follow the standard python `pep8` style requirements but with a few notable differences:
 
-* ignore E111 (indentation is not a multiple of four) - we use *2 space indentation*
-* ignore E302 (expected 2 blank lines, found 0) - we use *1 line break between function defs*
-* strictly enforce E501 (line too long (82 > 79 characters)) - strongly enforce 80 char max
-* NO spaces in import statement block
+** ignore E111 (indentation is not a multiple of four) - we use **2 space indentation**
+** ignore E302 (expected 2 blank lines, found 0) - we use **1 line break between function defs**
+** strictly enforce E501 (line too long (82 > 79 characters)) - strongly enforce 80 char max
+** NO spaces in import statement block
 
-Pull requests that do not meet this linting/style guide *will be rejected*
+Pull requests that do not meet this linting/style guide **will be rejected**
 
 File Structure
 =================
@@ -33,3 +33,13 @@ def this_is_a_function(parameter_name):
   for i in list:
     do_something_else()
 ```
+
+Class Definition
+===============
+Please note - class names should be in **CAMEL CASE**
+
+```
+import requests
+import os
+
+class lass_name(
