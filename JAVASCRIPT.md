@@ -19,6 +19,25 @@ Semi-Colons
 Semi-colons are no longer required in Javascript. Please do not use them unless required to fix some particular bug.
 
 
+Lining Up Enclosures
+====================
+Enclosures should be lined up so the closing bracket is clearly aligned with the opening of the enclosure above. For example:
+
+
+```js
+// bad
+return (<div>
+ <span><span/>
+ </div>)
+
+// good
+return (
+  <div>
+    <span><span/>
+  </div>
+)
+```
+
 
 Arrays
 ===================
@@ -102,23 +121,3 @@ render() {
 ```
 
 This is clearly more of an art than a science and requires some practice. However, you should seek to break down components into the smallest re-usable components possible but also don't make 8000 one-off componenents.
-
-
-Lining Up Enclosures
-====================
-Enclosures should be lined up so the closing bracket is clearly aligned with the opening of the enclosure above. For example:
-
-
-```js
-// bad
-return (<div>
- <span><span/>
- </div>)
-
-// good
-return (
-  <div>
-    <span><span/> 
-  </div>
-)
-```
