@@ -36,10 +36,40 @@ def this_is_a_function(parameter_name):
 
 Class Definition
 ===============
-Please note - class names should be in **CAMEL CASE**
+Please note - class names should be in **CAMEL CASE** while all variables and methods should be in non-camel case underscore-based naming.
 
 ```
 import requests
 import os
 
-class lass_name(
+class ClassName:
+  
+  def __init__(self):
+    ''' this is the constructor '''
+    self._some_private_value = '1234'
+
+  def do_something(self, i):
+    ''' do some magical operations here'''
+    return i ** 2
+```
+
+Please note PRIVATELY scoped attributes/methods differently from PUBLICLY scoped attributes and methods by starting the variable definition with an `_`. For instance:
+
+```
+import requests
+import os
+
+class ClassName:
+  
+  def __init__(self):
+    ''' this is the constructor '''
+    self._some_private_value = '1234'
+		self.some_public_value = 'asdf'
+
+  def do_something_publicly(self, i):
+    return i ** 2
+
+	def _do_something_privately(self, i):
+		return i ** 3
+
+```
