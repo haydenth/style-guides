@@ -75,6 +75,16 @@ class ClassName:
 
 ```
 
+Clearly Name Variables
+===================
+Clearly name variables as much as possible.
+
+* Using single letter variables names is appropriate in **some cases** such as when iterating in a list comprension
+* Variable names that are abbreviations are usually ok. It's okay to shorten stuff like `SomeBigItem` to `sbi` as long as it's relatively clear of the origin.
+* Otherwise, variable names such as `a`, `bb` or `aa` are not acceptable
+
+
+
 Use List Comphrensions
 =================
 Whenever possible use list comphrenesions in lieu of a for loop. For instance the below function to compute squared values:
@@ -92,4 +102,5 @@ Can easily be stated in a single line as:
 output_list = [i ** 2 for i in range(0, 10)
 ```
 
-If you're not familiar with list comprhensions please [read the python documentation](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python)
+If you're not familiar with list comprhensions please [read the python documentation](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python). Using list comprhensions properly makes the code dramatically more readable and maintainable.
+
