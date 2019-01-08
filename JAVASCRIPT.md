@@ -60,14 +60,14 @@ whenSomethingHappens()
 In the case of multiple lines, we prefer the following ES6-like formulation. Below is an example using fetch:
 
 ```js
-fetch('https://www.asdf.com/endpoint.json')
+fetch('http://checkip.dyndns.org/')
   .then(response => response.json())
   .then(json_resp => console.log(json_resp))
   .catch(error => console.error(error))
 ```
 If you need a multiline promise reponse, see the example below. Wrap in a `{}` block
 ```js
-fetch('https://www.asdf.com/endpoint.json')
+fetch('http://checkip.dyndns.org/')
   .then(response => response.json())
   .then(json_resp => {
     console.log("this is a multi line.")
