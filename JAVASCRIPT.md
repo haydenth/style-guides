@@ -76,3 +76,29 @@ fetch('http://checkip.dyndns.org/')
   .catch(error => console.error(error))
 ```
 
+
+React Components
+===================
+There are websites with [https://css-tricks.com/react-code-style-guide/](Some Good React Style Suggestions). We recommend these.
+
+For the love of god, please break down your React Components into smaller reusable components. Something is wrong if your react component is basically a bunch of HTML - think thru each individual component and try to break it into as small of piece as possible. For example:
+
+```js
+// bad
+render() {
+  return (<div>
+    <div>{this.props.name}</div>
+    <div>{this.props.address1} {this.props.address2}<div>
+  </div>)
+}
+
+// good
+render() {
+  return (<div>
+    <div>{this.props.name}</div>
+    <div><AddressBlock line1={this.props.address1} line2={this.props.address2} /></div>
+  </div>)
+}
+
+
+```
