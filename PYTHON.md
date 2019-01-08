@@ -62,7 +62,7 @@ do_something(parameter1,
              parameter3)
 ```
 
-Class Definition
+Defining Classes and Methods
 ===============
 Please note - class names should be in **CAMEL CASE** while all variables and methods should be in non-camel case underscore-based naming.
 
