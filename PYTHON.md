@@ -149,3 +149,31 @@ And a BAD comment below. Don't write this comment, it's obvious and takes up a u
 def do_something():
   ''' loop over the list and power 2 '''
   return [i ** 2 for i in range(0, 10)]
+```
+
+Flask / SQLAlchemy Queries
+==================
+Lots of projects in python-world these days use SQLAlchemy to integrate with databases. SQLAlchemy gives you a lot of different and sometimes misleading ways to write queries and fetch data. Our preferred approach is to directly access the `session` variable. Wrapping the entire request in `()` allows you to make it multiline without having to use `\`
+
+For instance:
+```
+from application import db
+
+queried_data = (db.session.query(DatabaseTable)
+  .filter(DatabaseTable.field == 'asdf')
+  .filter(DatabaseTable.field2 == 12345)
+  .all())
+```
+
+And if you want to do any kind of JOIN:
+```
+from application import db
+
+queried_data = (db.session.query(DatabaseTable)
+  .join(DatabaseTable2, DatabaseTable2.id == DatabaseTable.id)
+  .filter(DatabaseTable.field == 'asdf')
+  .filter(DatabaseTable.field2 == 12345)
+  .all())
+```
+
+Avoid using the `filter_by` function in SQLAlchemy, because the assignment operator `=` is misleading and contracts the SQLALchemy `filter` function.
