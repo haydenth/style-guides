@@ -110,8 +110,6 @@ Clearly name variables as much as possible.
 * Variable names that are abbreviations are usually ok. It's okay to shorten stuff like `SomeBigItem` to `sbi` as long as it's relatively clear of the origin.
 * Otherwise, variable names such as `a`, `bb` or `aa` are not acceptable
 
-
-
 Use List Comphrensions
 =================
 Whenever possible use list comphrenesions in lieu of a for loop. For instance the below function to compute squared values:
@@ -130,6 +128,21 @@ output_list = [i ** 2 for i in range(0, 10)]
 ```
 
 If you're not familiar with list comprhensions please [read the python documentation](https://www.pythonforbeginners.com/basics/list-comprehensions-in-python). Using list comprhensions properly makes the code dramatically more readable and maintainable.
+
+Use Lambda Functions Judiciously
+==================
+Lambda functions are fine when used in the context like below, but don't overuse them please!
+
+```python
+data = [
+  {'name': 'Alice', 'math': 85, 'science': 90},
+  {'name': 'Bob', 'math': 78, 'science': 85},
+  {'name': 'Charlie', 'math': 95, 'science': 80}
+]
+
+sorted_data = sorted(data, key=lambda x: x['math'] + x['science'])
+print(sorted_data)
+```
 
 Sensible Comments
 ===================
@@ -151,12 +164,22 @@ def do_something():
   return [i ** 2 for i in range(0, 10)]
 ```
 
+Using a hashtag comment is fine too
+```python
+def do_something_complicated():
+  # this function is tricky - it can sometimes return
+  # different results depending on the time of day. this is 
+  # from a specific client request that data from 12-1 be multipled
+  # by fourteen'''
+  ...
+```
+
 SQLAlchemy Queries
 ==================
 Lots of projects in python-world these days use SQLAlchemy to integrate with databases. SQLAlchemy gives you a lot of different and sometimes misleading ways to write queries and fetch data. Our preferred approach is to directly access the `session` variable. Wrapping the entire request in `()` allows you to make it multiline without having to use `\`
 
 For instance:
-```
+```python
 from application import db
 
 queried_data = (db.session.query(DatabaseTable)
@@ -166,7 +189,7 @@ queried_data = (db.session.query(DatabaseTable)
 ```
 
 And if you want to do any kind of JOIN:
-```
+```python
 from application import db
 
 queried_data = (db.session.query(DatabaseTable)
